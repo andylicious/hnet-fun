@@ -33,6 +33,7 @@ const extractData = ($: any, listItems: any) => {
     listings.push({
       id,
       name,
+      timestamp: Date.now(),
       attributes,
     });
   });

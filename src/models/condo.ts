@@ -2,21 +2,23 @@ import mongoose from 'mongoose';
 const Schema = mongoose.Schema;
 
 export interface ICondoModel {
-  id: String;
-  name: String;
+  id: string;
+  name: string;
+  timestamp: number;
   attributes: {
-    region: String;
-    price: String;
-    area: String;
-    rooms: String;
-    fee: String;
-    sqmprice: String;
+    region: string;
+    price: string;
+    area: string;
+    rooms: string;
+    fee: string;
+    sqmprice: string;
   };
 }
 
 const condoSchema = new Schema({
   id: String,
   name: String,
+  timestamp: Number,
   attributes: {
     region: String,
     price: String,
@@ -41,6 +43,7 @@ export const createSchema = (condo: any) => {
   return new CondoModel({
     id: condo.id,
     name: condo.name,
+    timestamp: condo.timestamp,
     attributes: condo.attributes,
   });
 };
