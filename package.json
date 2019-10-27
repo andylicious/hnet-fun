@@ -5,6 +5,8 @@
   "main": "src/index.js",
   "scripts": {
     "start": "tsc && node dist/index.js",
+    "build": "tsc",
+    "docker:build": "docker build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Andreas Mann <andreasmann94@gmail.com>",

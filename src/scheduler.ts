@@ -5,6 +5,7 @@ const createJob = (interval: string, action: any) => {
   const job = new CronJob(interval, function() {
     console.log('Executing action');
     action();
+    console.log('Action executed');
   });
 
   return job;
